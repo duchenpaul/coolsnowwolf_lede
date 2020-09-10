@@ -1,3 +1,6 @@
+# docker build -t coolsnowwolf_lede .
+# docker run -it coolsnowwolf_lede
+
 FROM ubuntu
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -14,7 +17,6 @@ RUN apt-get clean
 
 RUN mkdir /app
 WORKDIR /app
-COPY ./ /app/
 
 RUN ./scripts/feeds update -a && ./scripts/feeds install -a  && make defconfig 
 
