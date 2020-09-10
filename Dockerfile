@@ -1,5 +1,5 @@
 # docker build -t coolsnowwolf_lede .
-# docker run -it coolsnowwolf_lede
+# docker run -v ${pwd}:/app -it coolsnowwolf_lede make menuconfig
 
 FROM ubuntu
 
@@ -20,4 +20,4 @@ WORKDIR /app
 
 RUN ./scripts/feeds update -a && ./scripts/feeds install -a  && make defconfig 
 
-CMD ["make", "menuconfig"]
+CMD ["/bin/bash"]
