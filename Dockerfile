@@ -1,5 +1,5 @@
 # docker build -t coolsnowwolf_lede .
-# docker run -v ${pwd}:/app -it coolsnowwolf_lede make menuconfig
+# docker run --name coolsnowwolf_lede -v ${pwd}:/app -it coolsnowwolf_lede make menuconfig
 
 FROM ubuntu
 
