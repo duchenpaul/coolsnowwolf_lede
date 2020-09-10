@@ -1,5 +1,6 @@
 # docker build -t coolsnowwolf_lede .
 # docker run --name coolsnowwolf_lede -v ${pwd}:/app -it coolsnowwolf_lede make menuconfig
+# docker cp coolsnowwolf_lede:/app/.config .
 
 FROM ubuntu
 
