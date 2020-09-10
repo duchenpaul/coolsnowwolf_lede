@@ -4,5 +4,7 @@ services:
   coolsnowwolf_lede:
     image: coolsnowwolf_lede
     container_name: coolsnowwolf_lede
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
     volumes:
       - .:/app
