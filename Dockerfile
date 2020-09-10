@@ -17,6 +17,7 @@ RUN apt-get clean
 
 RUN mkdir /app
 WORKDIR /app
+COPY ./ /app/
 
 RUN ./scripts/feeds update -a && ./scripts/feeds install -a  && make defconfig 
 
